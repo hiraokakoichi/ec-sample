@@ -10,7 +10,7 @@ class OrderController extends Controller
 {
     public function addOrder(): View
     {
-        $shortestDay = 1; // 要件1：最短配送日の設定 整数値。○日後を設定（設定値が「1」なら翌日から選択可能にする）
+        $shortestDay = 3; // 要件1：最短配送日の設定 整数値。○日後を設定（設定値が「1」なら翌日から選択可能にする）
         $optionsNumber = 5; // 要件2：表示する選択肢の数の設定 整数値。（設定値が「5」なら5日分の選択肢を表示）
         $timeCloseMode = true; // 要件3：15時以降の注文の場合は、最短配送日を1日後にずらす設定 真偽値。（真なら有効、偽なら無効）
         $weekdayMode = true; // 要件4：土曜日、日曜日は配送不可日として、選択肢から除外する設定 真偽値。（真なら有効、偽なら無効）
